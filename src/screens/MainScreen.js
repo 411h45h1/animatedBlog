@@ -8,17 +8,24 @@ const MainScreen = ({ navigation }) => {
   const { width, height } = Dimensions.get("window");
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ marginTop: 20, flex: 1, alignItems: "center" }}>
+      <Text
+        style={{
+          color: "black",
+          fontSize: 24,
+          fontWeight: "bold",
+          lineHeight: 28,
+        }}
+      >
+        Animated Flatlist
+      </Text>
       <View>
         <FlatList
           showsHorizontalScrollIndicator={false}
           data={data}
           keyExtractor={(item) => item.id.toString()}
           //   style={{ paddingHorizontal: 30 }}
-          contentContainerStyle={{
-            alignItems: "center",
-            marginTop: 20,
-          }}
+
           renderItem={({ item }) => {
             return (
               <View>
